@@ -23,6 +23,7 @@
       "argsIgnorePattern": "_"
     }],
     "func-names": "off",
-    "no-multi-assign": "off"
+    "no-multi-assign": "off",
+    "no-console": "off"
   }
 }
