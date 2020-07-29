@@ -1,5 +1,5 @@
 {
-  "name": "passport-strava-oauth2",
+  "name": "@riderize/passport-strava-oauth2",
   "version": "1.0.0",
   "description": "Strava authentication strategy for Passport and Node.js",
   "main": "./lib",
@@ -37,5 +37,8 @@
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5"
+  },
+  "directories": {
+    "lib": "lib"
   }
 }
