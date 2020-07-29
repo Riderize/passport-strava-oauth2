@@ -2,7 +2,7 @@
   "name": "passport-strava-example",
   "version": "0.0.0",
   "dependencies": {
-    "@riderize/passport-strava-oauth2": "^1.0.5",
+    "@riderize/passport-strava-oauth2": "^1.0.6",
     "express": "^4.17.1",
     "passport": "^0.4.1"
   }

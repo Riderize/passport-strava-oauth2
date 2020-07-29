@@ -2,9 +2,6 @@ const express = require('express');
 const passport = require('passport');
 const StravaStrategy = require('@riderize/passport-strava-oauth2').Strategy;
 
-const { STRAVA_CLIENT_ID } = process.env;
-const { STRAVA_CLIENT_SECRET } = process.env;
-
 // Passport session setup.
 //   To support persistent login sessions, Passport needs to be able to
 //   serialize users into and deserialize users out of the session.  Typically,
@@ -27,9 +24,9 @@ passport.deserializeUser(function (obj, done) {
 passport.use(
   new StravaStrategy(
     {
-      clientID: STRAVA_CLIENT_ID,
-      clientSecret: STRAVA_CLIENT_SECRET,
-      callbackURL: 'http://127.0.0.1:3000/auth/strava/callback',
+      clientID: 28214,
+      clientSecret: 'fb806042d2a210e12f3d740a5f9d1876b15666c0',
+      callbackURL: 'http://localhost:4000/auth/strava/callback',
     },
     async function (accessToken, refreshToken, profile, done) {
       console.log(profile);
@@ -38,21 +35,10 @@ passport.use(
   )
 );
 
-const app = express.createServer();
+const app = express();
 
-// configure Express
-app.configure(function () {
-  app.use(express.logger());
-  app.use(express.cookieParser());
-  app.use(express.bodyParser());
-  app.use(express.methodOverride());
-  app.use(express.session({ secret: 'keyboard cat' }));
-  // Initialize Passport!  Also use passport.session() middleware, to support
-  // persistent login sessions (recommended).
-  app.use(passport.initialize());
-  app.use(passport.session());
-  app.use(app.router);
-});
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Simple route middleware to ensure user is authenticated.
 //   Use this route middleware on any resource that needs to be protected.  If
@@ -83,7 +69,12 @@ app.get('/login', function (req, res) {
 //   request.  The first step in Strava authentication will involve
 //   redirecting the user to strava.com.  After authorization, Strava
 //   will redirect the user back to this application at /auth/strava/callback
-app.get('/auth/strava', passport.authenticate('strava', { scope: ['public'] }));
+app.get(
+  '/auth/strava',
+  passport.authenticate('strava', {
+    scope: `${'profile:read_all,activity:read_all'}`,
+  })
+);
 
 // GET /auth/strava/callback
 //   Use passport.authenticate() as route middleware to authenticate the
@@ -103,4 +94,4 @@ app.get('/logout', function (req, res) {
   res.redirect('/');
 });
 
-app.listen(3000);
+app.listen(4000);
