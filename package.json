@@ -23,8 +23,7 @@
   },
   "homepage": "https://github.com/Riderize/passport-strava-oauth2#readme",
   "dependencies": {
-    "passport-oauth2": "^1.5.0",
-    "pkginfo": "^0.4.1"
+    "passport-oauth2": "^1.5.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^3.7.1",
