@@ -1,6 +1,6 @@
 {
   "name": "@riderize/passport-strava-oauth2",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Strava authentication strategy for Passport and Node.js",
   "main": "./lib",
   "scripts": {
