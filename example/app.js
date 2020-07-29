@@ -1,6 +1,6 @@
-import express from 'express';
-import passport from 'passport';
-import StravaStrategy from '@riderize/passport-strava-oauth2';
+const express = require('express');
+const passport = require('passport');
+const StravaStrategy = require('@riderize/passport-strava-oauth2').Strategy;
 
 const { STRAVA_CLIENT_ID } = process.env;
 const { STRAVA_CLIENT_SECRET } = process.env;

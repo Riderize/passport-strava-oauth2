@@ -2,12 +2,11 @@
   "name": "passport-strava-example",
   "version": "1.0.0",
   "dependencies": {
-    "@riderize/passport-strava-oauth2": "^1.0.0",
+    "@riderize/passport-strava-oauth2": "^1.0.2",
     "express": "^4.17.1",
     "passport": "^0.4.1"
   },
   "scripts": {
     "start": "node app.js"
-  },
-  "type": "module"
+  }
 }
