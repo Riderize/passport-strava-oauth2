@@ -24,9 +24,9 @@ passport.deserializeUser(function (obj, done) {
 passport.use(
   new StravaStrategy(
     {
-      clientID: 28214,
-      clientSecret: 'fb806042d2a210e12f3d740a5f9d1876b15666c0',
-      callbackURL: 'http://localhost:4000/auth/strava/callback',
+      clientID: process.env.STRAVA_CLIENT_ID,
+      clientSecret: process.env.STRAVA_CLIENT_SECRET,
+      callbackURL: process.env.STRAVA_CALLBACK,
     },
     async function (accessToken, refreshToken, profile, done) {
       console.log(profile);
