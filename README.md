@@ -1,7 +1,7 @@
 # Passport Strava Oauth2
 
 ![Build Badge](https://img.shields.io/circleci/build/github/Riderize/passport-strava-oauth2/master)
-![NPM Badge](https://img.shields.io/npm/l/@riderize/passport-strava-oauth2)
+![License](https://img.shields.io/npm/l/@riderize/passport-strava-oauth2)
 ![NPM bundled Badge](https://img.shields.io/bundlephobia/min/@riderize/passport-strava-oauth2/1.0.10)
 
 [Strava](https://www.strava.com/) authentication strategy for [Passport](http://www.passportjs.org/) and Node.js.
