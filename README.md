@@ -1,5 +1,7 @@
 # Passport Strava Oauth2
 
+<p align="center"><img align="center" src="https://img.shields.io/circleci/build/github/Riderize/passport-strava-oauth2/master" /></p>
+
 [Strava](https://www.strava.com/) authentication strategy for [Passport](http://www.passportjs.org/) and Node.js.
 
 As base I used [Passport-Facebook](https://github.com/jaredhanson/passport-facebook). I just made a few changes to display the data that comes from Strava.
