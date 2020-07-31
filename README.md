@@ -1,5 +1,7 @@
 # Passport Strava Oauth2
 
+[![Build Badge](https://img.shields.io/circleci/build/github/Riderize/passport-strava-oauth2/master)] 
+
 <p><img src="https://img.shields.io/circleci/build/github/Riderize/passport-strava-oauth2/master" /></p>
 <p><img src="https://img.shields.io/npm/l/@riderize/passport-strava-oauth2" /></p>
 <p><img src="https://img.shields.io/bundlephobia/min/@riderize/passport-strava-oauth2/1.0.10" /></p>
