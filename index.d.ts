@@ -28,8 +28,7 @@ export interface StrategyOption {
 }
 
 
-export type VerifyFunction =
-  (accessToken: string, refreshToken: string, profile: Profile, done: (error: any, user?: any, info?: any) => void) => void;
+export type VerifyFunction = (accessToken: string, refreshToken: string, profile: Profile, done: (error: any, user?: any, info?: any) => void) => void;
 
 export class Strategy implements passport.Strategy {
   constructor(options: StrategyOption, verify: VerifyFunction);

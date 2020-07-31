@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 const express = require('express');
 const passport = require('passport');
 const StravaStrategy = require('@riderize/passport-strava-oauth2').Strategy;
