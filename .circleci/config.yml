@@ -22,8 +22,8 @@ jobs:
           name: Run tests
           command: npm test
       - run:
-        name: Run coverage
-        command: npm run coverage
+          name: Run coverage
+          command: npm run coverage
       - store_artifacts:
           path: coverage
           prefix: coverage
