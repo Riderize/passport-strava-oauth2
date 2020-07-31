@@ -72,7 +72,7 @@ app.get('/login', function (req, res) {
 app.get(
   '/auth/strava',
   passport.authenticate('strava', {
-    scope: `${'profile:read_all,activity:read_all'}`,
+    scope: ['profile:read_all,activity:read_all'],
   })
 );
 
