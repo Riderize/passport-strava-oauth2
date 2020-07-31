@@ -1,0 +1,29 @@
+version: 2.1
+
+jobs:
+  build:
+    working_directory: ~/passport-strava-oauth2
+    docker:
+      - image: circleci/node:12.18.2
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependecies-{{ checksum "package.json" }}
+            - v1-dependecies-
+      - run:
+          name: Install dependencies
+          command: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependecies-{{ checksum "package.json" }}
+      - run:
+          name: Lint
+          command: npm run lint
+      - run:
+          name: Run tests
+          command: npm test
+      - store_artifacts:
+          path: coverage
+          prefix: coverage
