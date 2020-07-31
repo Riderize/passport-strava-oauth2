@@ -4,7 +4,6 @@
 ![License](https://img.shields.io/npm/l/@riderize/passport-strava-oauth2)
 ![NPM bundled Badge](https://img.shields.io/bundlephobia/min/@riderize/passport-strava-oauth2/1.0.10)
 ![NPM version Badge](https://img.shields.io/npm/v/@riderize/passport-strava-oauth2)
-https://img.shields.io/npm/v/@riderize/passport-strava-oauth2
 
 [Strava](https://www.strava.com/) authentication strategy for [Passport](http://www.passportjs.org/) and Node.js.
 
