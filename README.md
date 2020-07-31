@@ -20,7 +20,7 @@ Strava uses the OAuth2 strategy in order to authenticate the users. This strateg
 
 In order to obtain a Client ID and Client Secret first you have to register an app at Strava.
 
-**Basic config: **
+**Basic config:**
 ```
 const StravaStrategy = require('@riderize/passport-strava-oauth2').Strategy;
 
@@ -58,7 +58,7 @@ passport.use(new StravaStrategy({
 
 ## Acknowledgments
 
-To [Jared Hanson](https://github.com/jaredhanson) for making [Passport](http://www.passportjs.org/) possible.
+- To [Jared Hanson](https://github.com/jaredhanson) for making [Passport](http://www.passportjs.org/) possible.
 
 ## License
 
