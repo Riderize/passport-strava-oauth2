@@ -1,6 +1,7 @@
 # Passport Strava Oauth2
 
 <p align="center"><img align="center" src="https://img.shields.io/circleci/build/github/Riderize/passport-strava-oauth2/master" /></p>
+<p align="center"><img align="center" src="https://img.shields.io/npm/l/@riderize/passport-strava-oauth2" /></p>
 
 [Strava](https://www.strava.com/) authentication strategy for [Passport](http://www.passportjs.org/) and Node.js.
 
