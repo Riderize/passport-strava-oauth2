@@ -27,11 +27,17 @@ export interface StrategyOption {
   profileURL?: string;
 }
 
+export interface StrategyOptionWithRequest extends StrategyOption {
+  passReqToCallback: true;
+}
 
 export type VerifyFunction = (accessToken: string, refreshToken: string, profile: Profile, done: (error: any, user?: any, info?: any) => void) => void;
+export type VerifyFunctionWithRequest =
+  (req: express.Request, accessToken: string, refreshToken: string, profile: Profile, done: (error: any, user?: any, info?: any) => void) => void;
 
 export class Strategy implements passport.Strategy {
   constructor(options: StrategyOption, verify: VerifyFunction);
+  constructor(options: StrategyOptionWithRequest, verify: VerifyFunctionWithRequest);
 
   name: string;
   authenticate(req: express.Request, options?: object): void;
