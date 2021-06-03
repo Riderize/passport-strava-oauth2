@@ -21,11 +21,12 @@ $ npm i @riderize/passport-strava-oauth2
 
 ### Configure Strategy
 
-Strava uses the OAuth2 strategy in order to authenticate the users. This strategy requires a callback, that receives these credentials and calls ```done``` returning the data of the user logged in as well as options to specify the ```Client ID```, ```Client Secret``` and ```Callback URL```.
+Strava uses the OAuth2 strategy in order to authenticate the users. This strategy requires a callback, that receives these credentials and calls `done` returning the data of the user logged in as well as options to specify the `Client ID`, `Client Secret` and `Callback URL`.
 
 In order to obtain a Client ID and Client Secret first you have to register an app at Strava.
 
 **Basic config:**
+
 ```
 const StravaStrategy = require('@riderize/passport-strava-oauth2').Strategy;
 
@@ -43,6 +44,7 @@ passport.use(new StravaStrategy({
 ```
 
 **With Typescript:**
+
 ```
 import strategy from '@riderize/passport-strava-oauth2';
 
@@ -60,6 +62,10 @@ passport.use(new StravaStrategy({
   }
 ));
 ```
+
+## Types
+
+- The types of this lib are now on [@types/riderize\_\_passport-strava-oauth2](https://www.npmjs.com/package/@types/riderize__passport-strava-oauth2)
 
 ## Acknowledgments
 
